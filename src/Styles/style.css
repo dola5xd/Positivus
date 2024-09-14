@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.swiper-pagination-bullet > img {
+  content: url("/assets/pagination.svg");
+}
+
+.swiper-pagination-bullet-active > img {
+  content: url("/assets/pagination-active.svg");
+}
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 25px;
+  margin: 0 0.5rem !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: transparent;
+}
+.swiper-pagination-bullet {
+  background-color: transparent;
+  opacity: 1;
+}
+.pagination-bullet {
+  width: 50px;
+  margin: 0 0rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #b9ff66;
+}
+@media screen and (max-width: 760px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 92%;
+  }
+}
+@layer components {
+  .card {
+    @apply z-10 relative  Laptops:w-[calc(50%_-_40px)] flex items-center gap-7 justify-between rounded-2xl p-10 shadow-[0px_5px_0px_#191A23] border-2 border-brand_2 min-h-[300px] w-full flex-col Laptops:flex-row [&>div>span>h1]:text-[2rem] [&>img]:hidden Laptops:[&>img]:block;
+  }
+  .before {
+    @apply text-[2.5rem] Laptops:text-[2.5rem] before:rounded-xl w-full relative block before:left-0 font-bold before:absolute before:h-full before:-z-10 before:content-[''] before:bg-brand_1 before:w-full;
+  }
+  .btn-primary {
+    @apply border-2 border-brand_2 py-[15px] px-[30px] rounded-xl bg-brand_2 duration-500 text-brand_3 hover:bg-transparent hover:text-brand_2;
+  }
+  .case-card {
+    @apply font-bold text-[1.3rem] flex flex-col gap-7 border-b-2 Laptops:border-r-2 Laptops:border-b-0 border-brand_3 [&:last-child]:border-none [&>p]:text-brand_3 [&>button]:flex [&>button]:items-center [&>button]:gap-3 [&>button]:text-brand_1 [&>button>svg]:hover:rotate-[30deg] [&>button>svg]:duration-500 pb-[20px] Laptops:pb-0;
+  }
+  .accordion {
+    @apply py-[50px] Laptops:py-[100px] px-[25px] Laptops:px-[100px] bg-brand_3 Laptops:rounded-3xl rounded-[50px] border-2 border-brand_2 shadow-[0px_10px_0px_#191A23] duration-500 opacity-0;
+  }
+  .team-card {
+    @apply border-2 border-brand_2 w-full Laptops:w-[calc(100%_/_3_-_30px)] px-10 py-[50px] min-h-[300px] rounded-[50px] shadow-[0px_5px_0px_#191A23] flex flex-col gap-7 relative opacity-0;
+  }
+  .slider-container {
+    @apply border-2 border-brand_2 bg-brand_2 rounded-[50px] min-h-[100px]
+    text-brand_1 px-[30px] Laptops:px-[150px] py-[100px] flex items-center gap-[50px];
+  }
+  .slide {
+    @apply relative min-w-[350px]  min-h-[400px] Laptops:min-h-[300px] Laptops:min-w-[610px] flex flex-col items-center justify-center;
+  }
+}
